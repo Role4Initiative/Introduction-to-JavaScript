@@ -20,9 +20,9 @@ Do the following:
    HINT: no function required
 */
 
-const votingAge = 18;
+let votingAge = 18;
 if(votingAge >= 18){
-  console.log('Task 1a = true');
+  console.log('Task 1a =', true);
 }
 
 /*
@@ -36,9 +36,13 @@ Do the following:
    HINT: no function required
 */
 
+var variable1 = 'not hammer time';
+let variable2 = 'stop';
+if(variable2 === 'stop'){
+  var variable1 = '!!! HAMMER TIME !!!';
+}
 
-
-
+console.log('Task 1b =', variable1)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -51,7 +55,7 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let weGonnaParty = "1999"
 
 
 /*
@@ -63,9 +67,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b;
 }
+
+console.log('Task 1d =', multiply(8, 2));
 
 
 
@@ -79,9 +85,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age*7
 }
+
+console.log('Task 2 =', dogYears(7))
 
 
 
@@ -131,7 +139,7 @@ function hungryDog(weight, age){
 }
 
 
-console.log('Task 3', hungryDog(45, 4));
+console.log('Task 3 =', hungryDog(45, 4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -155,13 +163,35 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-let computer = Math.random;
-
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.ceil(Math.random()*3);{
+  if(computer === 1){
+    computer = "rock";
+  }else if(computer === 2){
+    computer = "paper";
+  }else(computer === 3);{
+    computer = "scissors";
+  }
 }
 
+function game(user, computer){
+  if(user === "scissors" && computer === "paper"){
+    return "You Win!";
+  }else if( user === "paper" && computer === "rock"){
+    return "You Win!";
+  }else if(user === "rock" && computer === "scissors"){
+    return "You Win!";
+  }else if(user === computer){
+    return "It's a Tie!";
+  }else if(user === "scissors" && computer === "rock"){
+    return "You Lose!";
+  }else if(user === "paper" && computer === "scissors"){
+    return "You Lose!";
+  }else if(user === "rock" && computer === "paper"){
+    return "You Lose!";
+  }
+}
 
+console.log('Task 4 =', 'Rock,', game("rock", computer))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -174,10 +204,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+return km*.621371;
 }
-
+console.log('Task 5a =', miles(2))
 
 
 //Task 5b - Feet to CM
@@ -188,9 +218,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+return cm/30.48
 }
+console.log('Task 5b =', feet(12))
+
 
 
 
@@ -204,10 +236,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      for(let i = number; i > 1; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+      }    
 }
 
+console.log('Task 6 =', annoyingSong(99))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -224,10 +259,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if(score === 90-100){
+    return 'you got an A';
+  }else if(score === 80-89){
+    return 'you got a B';
+  }else if(score === 70-79){
+    return 'you got a C';
+  }else if(score === 60-69){
+    return 'you got a D';
+  }else(score === 0-59);{
+    return 'you got an F';
+  }
 }
 
+console.log('Task 7 =', grade(100))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
