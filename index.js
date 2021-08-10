@@ -55,8 +55,10 @@ Do the following:
    HINT: look up the Number method
 */
 
-let weGonnaParty = "1999"
+let weGonnaParty = "1999";
+weGonnaParty.valueOf = 1999;
 
+console.log('Task 1c =', weGonnaParty)
 
 /*
 Task 1d - Multiply
