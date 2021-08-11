@@ -56,7 +56,7 @@ Do the following:
 */
 
 let weGonnaParty = "1999";
-weGonnaParty.valueOf = 1999;
+weGonnaParty = 1999;
 
 console.log('Task 1c =', weGonnaParty)
 
@@ -167,29 +167,29 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 
 let computer = Math.ceil(Math.random()*3);{
   if(computer === 1){
-    computer = "rock";
+    computer === "rock";
   }else if(computer === 2){
-    computer = "paper";
+    computer === "paper";
   }else(computer === 3);{
-    computer = "scissors";
+    computer === "scissors";
   }
 }
 
 function game(user, computer){
   if(user === "scissors" && computer === "paper"){
-    return "You Win!";
+    return "you win!";
   }else if( user === "paper" && computer === "rock"){
-    return "You Win!";
+    return "you win!";
   }else if(user === "rock" && computer === "scissors"){
-    return "You Win!";
+    return "you win!";
   }else if(user === computer){
-    return "It's a Tie!";
+    return "it's a tie";
   }else if(user === "scissors" && computer === "rock"){
-    return "You Lose!";
+    return "you lose!";
   }else if(user === "paper" && computer === "scissors"){
-    return "You Lose!";
+    return "you lose!";
   }else if(user === "rock" && computer === "paper"){
-    return "You Lose!";
+    return "you lose!";
   }
 }
 
@@ -262,20 +262,20 @@ Using the grade function below do the following:
 */
 
 function grade(score){
-  if(score = 90-100){
+  if(score >= 90 && score <= 100){
     return 'you got an A';
-  }else if(score = 80-89){
+  }else if(score >= 80 && score <= 89){
     return 'you got a B';
-  }else if(score = 70-79){
+  }else if(score >= 70 && score <= 79){
     return 'you got a C';
-  }else if(score = 60-69){
+  }else if(score >= 60 && score <= 69){
     return 'you got a D';
-  }else if(score = 0-59){
+  }else if(score >= 0 && score <= 59){
     return 'you got an F';
   }
 }
 
-console.log('Task 7 =', grade(50))
+console.log('Task 7 =', grade(95))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
