@@ -262,20 +262,20 @@ Using the grade function below do the following:
 */
 
 function grade(score){
-  if(score === 90-100){
+  if(score = 90-100){
     return 'you got an A';
-  }else if(score === 80-89){
+  }else if(score = 80-89){
     return 'you got a B';
-  }else if(score === 70-79){
+  }else if(score = 70-79){
     return 'you got a C';
-  }else if(score === 60-69){
+  }else if(score = 60-69){
     return 'you got a D';
-  }else(score === 0-59);{
+  }else if(score = 0-59){
     return 'you got an F';
   }
 }
 
-console.log('Task 7 =', grade(100))
+console.log('Task 7 =', grade(50))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
